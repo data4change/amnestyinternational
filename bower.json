@@ -1,0 +1,22 @@
+{
+  "name": "amnesty-international",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Chafic Najjar <chafic.najjar@gmail.com> (http://chaficn.com)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/chaficnajjar/amnesty-international",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "4.4.0",
+    "normalize-css": "5.0.0",
+    "d3-carte": "0.2.3"
+  }
+}

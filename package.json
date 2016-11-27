@@ -1,0 +1,39 @@
+{
+  "name": "amnesty-international",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaficnajjar/amnesty-international.git"
+  },
+  "author": "Chafic Najjar <chafic.najjar@gmail.com> (http://chaficn.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaficnajjar/amnesty-international/issues"
+  },
+  "homepage": "https://github.com/chaficnajjar/amnesty-international#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "6.18.0",
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-babel": "6.1.2",
+    "gulp-changed": "1.3.2",
+    "gulp-changed-in-place": "2.0.3",
+    "gulp-clean-css": "2.0.13",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "3.0.0",
+    "gulp-jshint": "2.0.4",
+    "gulp-modernizr": "1.0.0-alpha",
+    "gulp-processhtml": "1.1.0",
+    "gulp-sass": "2.3.2",
+    "gulp-stylelint": "3.4.0",
+    "gulp-uglify": "2.0.0",
+    "jshint": "2.9.4",
+    "modernizr": "3.3.1"
+  }
+}

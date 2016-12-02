@@ -26,7 +26,7 @@ const gulp          = require('gulp'),
 
 gulp.task('default',    ['lint', 'build']);
 gulp.task('lint',       ['lint:styles', 'lint:scripts']);
-gulp.task('build',      ['build:markup', 'build:styles', 'build:styles-lib', 'build:scripts', 'build:scripts-lib', 'build:modernizr', 'copy:data']);
+gulp.task('build',      ['build:markup', 'build:styles', 'build:styles-lib', 'build:scripts', 'build:scripts-lib', 'build:modernizr', 'copy:data', 'copy:fonts', 'copy:images']);
 gulp.task('watch',      ['watch:markup', 'watch:styles', 'watch:scripts']);
 
 gulp.task('clean', () => del('dist'));
@@ -100,9 +100,7 @@ gulp.task('build:scripts', () => {
 
 gulp.task('build:scripts-lib', () => {
     return gulp.src([
-            'lib/d3/d3.min.js',
-            'lib/topojson/topojson.min.js',
-            'lib/d3-geo-projection/d3.geo.projection.min.js'
+            'lib/d3/d3.min.js'
         ])
         .pipe(concat('scripts-lib.min.js'))
         .pipe(uglify())
@@ -116,21 +114,10 @@ gulp.task('build:modernizr', () => {
         .pipe(gulp.dest('lib/modernizr/'));
 });
 
-gulp.task('copy:data', () => {
-    return gulp.src([
-            'data/geodata.json'
-        ])
-        .pipe(gulp.dest('dist/data/'));
-});
+gulp.task('copy:data', () => gulp.src('data/*').pipe(gulp.dest('dist/data/')));
+gulp.task('copy:fonts', () => gulp.src('fonts/*').pipe(gulp.dest('dist/fonts/')));
+gulp.task('copy:images', () => gulp.src('images/*').pipe(gulp.dest('dist/images/')));
 
-gulp.task('watch:markup', () => {
-    return gulp.watch(FILES.allHtml, ['build:markup']);
-});
-
-gulp.task('watch:styles', () => {
-    return gulp.watch(FILES.allScss, ['lint:styles', 'build:styles']);
-});
-
-gulp.task('watch:scripts', () => {
-    return gulp.watch(FILES.allJs, ['lint:scripts', 'build:scripts']);
-});
+gulp.task('watch:markup', () => gulp.watch(FILES.allHtml, ['build:markup']));
+gulp.task('watch:styles', () => gulp.watch(FILES.allScss, ['lint:styles', 'build:styles']));
+gulp.task('watch:scripts', () => gulp.watch(FILES.allJs, ['lint:scripts', 'build:scripts']));

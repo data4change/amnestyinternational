@@ -14,7 +14,78 @@
     <!-- build:css css/style.min.css --><!-- /build -->
 </head>
 <body>
-    <div class="map"></div>
+    <div data-header-wrapper="" class="header-wrap">
+        <header class="header" data-header="" role="banner">
+            <div class="header__container" data-header-container="">
+                <h1 class="logo" data-logo=""><a class="logo__link" href="javascript:;">Amnesty International</a></h1>
+                <div class="nav-overlay" data-nav-overlay=""></div>
+                <div class="nav-btn" hidden="" aria-hidden="true" data-nav-btn="">
+                    <span class="nav-btn__lines"></span> Menu
+                </div>
+                <nav class="nav" data-nav="" role="navigation" aria-expanded="false">
+                    <h1 class="visually-hidden" id="navigation">Main menu</h1>
+                    <div class="nav__options">
+                        <div class="nav-options__text">
+                            Main menu
+                        </div>
+                        <div class="nav-options__close" data-nav-close="">
+                            CLOSE
+                        </div>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-list__item">
+                            <a class="nav-list__link" href="javascript:;" target="">Who We Are</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__link" href="javascript:;" target="">What We Do</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__link" href="javascript:;" target="">Countries</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__link" href="javascript:;" target="">Get Involved</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__link nav-list__link--donate" data-overlay-show="donate" href="javascript:;" target="">Donate now</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a class="nav-list__link" href="javascript:;" target="">Latest</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-btn" hidden="" aria-hidden="true" data-lang-btn="">en</div>
+                <div class="search-btn" hidden="" aria-hidden="true" data-nav-search-btn="">
+                    <span class="search-btn__text">
+                        Search
+                    </span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main>
+        <div class="visualization">
+            <div class="visualization__countries"></div>
+            <div class="visualization__country-detailed">
+                <h2>germany, how welcoming are we?</h2>
+                <button type="button"></button>
+                <div class=""></div>
+                <button type="button">SHARE!</button>
+            </div>
+        </div>
+        <div class="wrapper">
+            <h1 class="site-title">The Welcome Index</h1>
+            <p class="site-paragraph">
+                We interviewed thousands of people in 20 countries around the world to get a closer insight about how they feel and how to what extent of closeness would they welcome refugees.
+            </p>
+            <p class="site-paragraph">
+                Governments around the world seem to be less welcoming than the citizens who elected them.
+            </p>
+            <p class="site-paragraph">
+                Visualize the #WelcomeIndex of your country, compare it with others and check whether your government is doing enough for refugees.
+            </p>
+            <div class="visualization-space"></div>
+        </div>
+    </main>
 
     <!-- build:js js/scripts-lib.min.js --><!-- /build -->
     <!-- build:js js/scripts.min.js --><!-- /build -->

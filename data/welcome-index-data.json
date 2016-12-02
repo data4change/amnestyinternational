@@ -1,0 +1,86 @@
+{
+    "countries": [
+        {
+            "country": "Argentina",
+            "welcomeIndex": 24.1539820822817
+        }, {
+            "country": "Australia",
+            "welcomeIndex": 36.6619823478315
+        }, {
+            "country": "Brazil",
+            "welcomeIndex": 24.6967990769685
+        }, {
+            "country": "Canada",
+            "welcomeIndex": 38.0975630482377
+        }, {
+            "country": "Chile",
+            "welcomeIndex": 29.5999232527111
+        }, {
+            "country": "China",
+            "welcomeIndex": 42.7660380276632
+        }, {
+            "country": "France",
+            "welcomeIndex": 28.1096566918221
+        }, {
+            "country": "Germany",
+            "welcomeIndex": 42.2529682338777
+        }, {
+            "country": "Ghana",
+            "welcomeIndex": 26.054416464532
+        }, {
+            "country": "Greece",
+            "welcomeIndex": 32.3120465084275
+        }, {
+            "country": "India",
+            "welcomeIndex": 29.3027170271465
+        }, {
+            "country": "Indonesia",
+            "welcomeIndex": 15.9258374769052
+        }, {
+            "country": "Jordan",
+            "welcomeIndex": 35.0200369426825
+        }, {
+            "country": "Kenya",
+            "welcomeIndex": 19.444458279001
+        }, {
+            "country": "Lebanon",
+            "welcomeIndex": 35.0815775068709
+        }, {
+            "country": "Mexico",
+            "welcomeIndex": 25.0957118029036
+        }, {
+            "country": "Nigeria",
+            "welcomeIndex": 20.4753428632874
+        }, {
+            "country": "Pakistan",
+            "welcomeIndex": 25.8317988351718
+        }, {
+            "country": "Poland",
+            "welcomeIndex": 17.9705660173102
+        }, {
+            "country": "Russia",
+            "welcomeIndex": 9.18694886191044
+        }, {
+            "country": "South Africa",
+            "welcomeIndex": 21.8336947891056
+        }, {
+            "country": "South Korea",
+            "welcomeIndex": 29.5711393394271
+        }, {
+            "country": "Spain",
+            "welcomeIndex": 35.4560584048298
+        }, {
+            "country": "Thailand",
+            "welcomeIndex": 16.3711288029541
+        }, {
+            "country": "Turkey",
+            "welcomeIndex": 20.3537399648221
+        }, {
+            "country": "UK",
+            "welcomeIndex": 41.7647812458019
+        }, {
+            "country": "USA",
+            "welcomeIndex": 29.8167608683845
+        }
+    ]
+}

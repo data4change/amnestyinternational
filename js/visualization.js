@@ -67,5 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         document.addEventListener('scroll', checkPosition);
         window.addEventListener('load', checkPosition);
+        window.addEventListener('resize', checkPosition);
     });
 });

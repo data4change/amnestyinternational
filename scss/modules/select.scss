@@ -1,0 +1,15 @@
+.select {
+    appearance: none;
+    padding: 4px 8px;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 600;
+}
+
+.select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+
+.select--full-width {
+    width: 100%;
+}

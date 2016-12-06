@@ -1,0 +1,149 @@
+.visualization-space {
+    height: 100vh;
+}
+
+.visualization {
+    position: fixed;
+    top: calc(72px + 5vh);
+    left: 10vw;
+    width: 80vw;
+    height: calc(100vh - 72px - 5vh - 5vh);
+}
+
+.visualization--in-the-background {
+    z-index: -1;
+}
+
+.visualization__countries {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.visualization__country {
+    flex: 0 1 auto;
+    width: 20%;
+    cursor: pointer;
+}
+
+.visualization__country:hover {
+    box-shadow: inset 0 0 0 3px black;
+}
+
+.center-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visualization__country-text {
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity .35s ease;
+}
+
+.visualization__country-text--hidden {
+    opacity: 0;
+}
+
+.visualization__country-detailed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.visualization__country-detailed-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.visualization__paragraph--hidden {
+    display: none;
+}
+
+.visualization__paragraph {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.visualization__paragraph-line {
+    padding-right: 3px;
+    padding-left: 3px;
+    line-height: 1.2;
+}
+
+@media screen and (min-width: 65em) {
+    .visualization__country-detailed-title {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        font-size: 48px;
+    }
+}
+
+.visualization-local {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.visualization__detailed {
+    position: relative;
+}
+
+.options {
+    margin-top: 60px;
+}
+
+@media screen and (min-width: 65em) {
+    .options {
+        margin-top: 120px;
+    }
+}
+
+.filter-picker-container,
+.input-range {
+    width: 300px;
+}
+
+.input-range {
+    margin-top: 20px;
+}
+
+.input-range__element,
+.input-range__axis {
+    display: block;
+}
+
+.axis {
+    .domain {
+        display: none;
+    }
+
+    .tick line {
+        display: none;
+    }
+
+    .tick text {
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+.share-button {
+    margin-top: 14px;
+    padding: 4px 16px;
+}

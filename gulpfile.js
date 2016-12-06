@@ -17,8 +17,8 @@ const gulp          = require('gulp'),
     modernizr       = require('gulp-modernizr'),
     FILES           = Object.freeze({
                         allScss: [
-                            'scss/**/*.scss',
-                            '!scss/**/_*.scss'
+                            'scss/base/**/*.scss',
+                            'scss/modules/**/*.scss'
                         ],
                         allJs: 'js/**/*.js',
                         allHtml: '*.html'

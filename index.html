@@ -63,13 +63,46 @@
         </header>
     </div>
     <main>
-        <div class="visualization">
+        <div class="visualization visualization--in-the-background">
             <div class="visualization__countries"></div>
             <div class="visualization__country-detailed">
-                <h2>germany, how welcoming are we?</h2>
-                <button type="button"></button>
-                <div class=""></div>
-                <button type="button">SHARE!</button>
+                <button type="button" class="button button--dark button--round back-button">X</button>
+                <div class="col-7 visualization__detailed">
+                    <h2 class="visualization__country-detailed-title"><span class="country-name"></span>,<br>how welcoming are we?</h2>
+                    <button type="button" id="toggle-filters-information" class="button button--dark button--round">▼</button>
+                    <div id="filters-information" class="visualization__paragraph visualization__paragraph--hidden">
+                        <span class="visualization__paragraph-line text--highlight-dark">The following filters</span><br>
+                        <span class="visualization__paragraph-line text--highlight-dark">indicate different</span><br>
+                        <span class="visualization__paragraph-line text--highlight-dark">percentages to how</span><br>
+                        <span class="visualization__paragraph-line text--highlight-dark">close you can you</span><br>
+                        <span class="visualization__paragraph-line text--highlight-dark">let a refugee in.</span>
+                    </div>
+                    <div class="visualization-local">
+                        <div class="visualization-local__country visualization__country center-contents">
+                            <span class="visualization__country-text">country</span>
+                        </div>
+                        <div class="visualization-local__city visualization__country center-contents">
+                            <span class="visualization__country-text">city</span>
+                        </div>
+                        <div class="visualization-local__neighborhood visualization__country center-contents">
+                            <span class="visualization__country-text">neighborhood</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 options">
+                    <div class="filter-picker-container">
+                        <select id="filter-picker" class="select select--full-width">
+                            <option value="age" selected>AGE</option>
+                            <option value="education">EDUCATION</option>
+                            <option value="income">INCOME</option>
+                            <option value="community-size">COMMUNITY SIZE</option>
+                        </select>
+                    </div>
+                    <div class="input-range">
+                        <input class="input-range__element" type="range" min="0" max="5" value="0">
+                    </div>
+                    <button type="button" class="button button--dark share-button">SHARE!</button>
+                </div>
             </div>
         </div>
         <div class="wrapper">

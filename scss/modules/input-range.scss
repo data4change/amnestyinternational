@@ -1,0 +1,126 @@
+$track-color: black !default;
+$thumb-color: white !default;
+
+$thumb-radius: 0 !default;
+$thumb-height: 18px !default;
+$thumb-width: 30px !default;
+$thumb-border-width: 3px !default;
+$thumb-border-color: black !default;
+
+$track-width: 100% !default;
+$track-height: 18px !default;
+$track-border-width: 0 !default;
+$track-border-color: black !default;
+
+$track-radius: 0 !default;
+$contrast: 5% !default;
+
+@mixin track() {
+    width: $track-width;
+    height: $track-height;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+@mixin thumb() {
+    width: $thumb-width;
+    height: $thumb-height;
+    background: $thumb-color;
+    border: $thumb-border-width solid $thumb-border-color;
+    border-radius: $thumb-radius;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    /*
+     * 1. Hides the slider so that custom slider can be made.
+     * 2. Specific width is required for Firefox.
+     * 3. Otherwise white in Chrome.
+     */
+    appearance: none;  /* 1. */
+    width: 100%;  /* 2. */
+    background: transparent;  /* 3. */
+
+    /*
+     * 1. Removes the blue border. You should probably do some
+     *    kind of focus styling for accessibility reasons though.
+     */
+    &:focus {
+        outline: none;  /* 1. */
+    }
+
+    &::-webkit-slider-runnable-track {
+        @include track();
+        background: $track-color;
+        border: $track-border-width solid $track-border-color;
+        border-radius: $track-radius;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+        background: lighten($track-color, $contrast);
+    }
+
+    /*
+     * Special styling for WebKit/Blink.
+     * 1. You need to specify a margin in Chrome, but in Firefox and IE it is automatic.
+     * 2. Add cool effects to your sliders!
+     */
+    &::-webkit-slider-thumb {
+        @include thumb();
+
+        /* Include vendor prefix because of this selector */
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-appearance: none;
+        /* stylelint-enable property-no-vendor-prefix */
+        margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+    }
+
+    /*
+     * All the same stuff for Firefox.
+     */
+    &::-moz-range-track {
+        @include track();
+        background: $track-color;
+        border: $track-border-width solid $track-border-color;
+        border-radius: $track-radius;
+    }
+
+    &::-moz-range-thumb {
+        @include thumb();
+    }
+
+    /*
+     * All the same stuff for IE.
+     */
+    &::-ms-track {
+        @include track();
+        color: transparent;
+        background: transparent;
+        border-color: transparent;
+        border-width: $thumb-width 0;
+    }
+
+    &::-ms-thumb {
+        @include thumb();
+    }
+
+    &::-ms-fill-lower {
+        background: darken($track-color, $contrast);
+        border: $track-border-width solid $track-border-color;
+        border-radius: $track-radius * 2;
+    }
+
+    &::-ms-fill-upper {
+        background: $track-color;
+        border: $track-border-width solid $track-border-color;
+        border-radius: $track-radius * 2;
+    }
+
+    &:focus::-ms-fill-lower {
+        background: $track-color;
+    }
+
+    &:focus::-ms-fill-upper {
+        background: lighten($track-color, $contrast);
+    }
+}

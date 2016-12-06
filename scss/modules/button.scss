@@ -1,0 +1,19 @@
+.button {
+    appearance: none;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button--dark {
+    color: white;
+    background-color: black;
+    font-weight: 800;
+}
+
+.button--round {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+}
